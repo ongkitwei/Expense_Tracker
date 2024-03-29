@@ -1,6 +1,5 @@
-TYPE,DESCRIPTION,Unnamed: 2,AMOUNT
-Shopping,wide pleated pants (uniqlo),,49.9
-Phone Bill,simba,,10.0
-Food,mala,,10.0
-Transport,transport,,20.0
-Investment,investment,,100
+TYPE,DESCRIPTION,DATE,AMOUNT
+Food,bbdc coffee,March,1.6
+Food,plc waffle,March,7.6
+Shopping,portable fan,March,13.09
+Others,bbdc driving,March,100
