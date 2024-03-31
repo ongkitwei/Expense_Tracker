@@ -82,6 +82,29 @@ def Extract_value():
 
     return food_amount_total, transport_amount_total, phonebill_amount_total, shopping_amount_total, investment_amount_total, others_amount_total, list_month_Amt
 
+def monthly_expenses(current_month):
+    df = pd.read_csv("info.csv" )
+
+    # food 
+    current_month_food = sum(df[(df["DATE"] == current_month) & (df["TYPE"] == "Food")]["AMOUNT"])
+
+    # transport
+    current_month_transport = sum(df[(df["DATE"] == current_month) & (df["TYPE"] == "Transport")]["AMOUNT"])
+
+    # phone bill amount
+    current_month_phonebill = sum(df[(df["DATE"] == current_month) & (df["TYPE"] == "Phone Bill")]["AMOUNT"])
+
+    # shopping amount
+    current_month_shopping = sum(df[(df["DATE"] == current_month) & (df["TYPE"] == "Shopping")]["AMOUNT"])
+
+    # investment amount
+    current_month_investment = sum(df[(df["DATE"] == current_month) & (df["TYPE"] == "Investment")]["AMOUNT"])
+
+    # others amount
+    current_month_others = sum(df[(df["DATE"] == current_month) & (df["TYPE"] == "Others")]["AMOUNT"])
+
+    return current_month_food, current_month_transport, current_month_phonebill, current_month_shopping, current_month_investment, current_month_others
+
 def get_CurrentMonth():
     today = date.today()
     current_month = today.strftime("%B")
